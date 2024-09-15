@@ -1,0 +1,34 @@
+.term h2{
+	text-align: left;
+	margin-top: 50px;
+	text-transform: lowercase;
+	margin-bottom: 27px;
+}
+.term h2::first-letter{
+	text-transform: uppercase;
+}
+
+.term p{
+	margin-bottom: 16px;
+	font-size: 15px;
+	font-weight: 500;
+	color:rgba(80, 80, 80, 1);
+	line-height: 24px;
+}
+.term p a{
+	display: inline-block;
+	color: rgba(63, 80, 174, 1);
+	font-weight: 700;
+	border-bottom: 1px solid rgba(63, 80, 174, 1);
+	line-height: 15px;
+}
+
+@media (max-width: 550px){
+	.term h2{
+		font-size: 32px;
+		line-height: 43px;
+		margin-top: 25px;
+		margin-bottom: 20px;
+	}
+	
+}

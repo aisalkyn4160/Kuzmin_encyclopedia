@@ -1,0 +1,129 @@
+.catalog{
+	background-color: rgba(255, 255, 255, 1);
+}
+.breadcrumbs{
+	display: inline-block;
+	margin-top: 29px;
+}
+.breadcrumbs a{
+	display: inline-block;
+	color: rgba(18, 18, 18, 1);
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 13px;
+	border-bottom: 1px solid rgba(18, 18, 18, 1);
+}
+.breadcrumbs a.active{
+	color: rgba(85, 85, 85, 1);
+	border-bottom: none;
+}
+.catalog-A .alphabet a{
+	border: 1px solid rgba(189, 189, 189, 0.29);
+	color: rgba(153, 153, 153, 1);
+}
+
+.alphabet a.active{
+	color: rgba(63, 80, 174, 1);
+	border-color: rgba(63, 80, 174, 1);
+}
+
+.catalog-list{
+	width: 100%;
+	margin-top: 9px;
+}
+.catalog-list li{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 10px;
+	padding: 13px 0;
+	border-bottom: 1px solid rgba(189, 189, 189, 0.29)
+}
+.catalog-list li a{
+	width: fit-content;
+	color:rgba(63, 80, 174, 1);
+	font-size: 15px;
+	font-weight: 500;
+	line-height: 15px;
+	text-transform: lowercase;
+	border-bottom: 1px solid transparent;
+	transition: all 0.5s ease;
+}
+.catalog-list li a:first-letter{
+	text-transform: uppercase;
+}
+.catalog-list li a:hover{
+	font-weight: 700;
+	border-bottom: 1px solid rgba(63, 80, 174, 1);
+}
+.pagination{
+    width: 320px;
+    display: flex; 
+    margin: 60px auto 0;
+    user-select: none;
+}
+
+.page-item{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;
+	border-radius: 8px;
+	border: 1px solid transparent;
+	transition: border 0.5s ease;
+}
+.page-item:hover{
+	border: 1px solid rgba(227, 47, 47, 1);
+}
+.page-item.active{
+    background: rgba(227, 47, 47, 1);
+    color: rgba(255, 255, 255, 1) !important;
+}
+
+.disabled {
+    display: none;
+}
+
+.previous-page  a,
+.next-page a{
+    display: block;
+    position: relative;
+    color: transparent;
+}
+
+.previous-page a::after,
+.next-page a::after{
+    content: "";
+    display: block;
+    width: 7px;
+    height: 17px;
+    background-image: url('../assets/icons/nextVector.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.previous-page a::after{
+	background-image: url('../assets/icons/nextVector.svg');
+	transform: rotate(180deg) translate(50%,50%);
+}
+
+@media (max-width: 600px){
+    .catalog-list li{
+        grid-template-columns: repeat(1, 1fr);
+        border-bottom: none;
+        padding: 0;
+        gap: 0;
+    }
+
+    .catalog-list li a{
+        width: 100%;
+        border-bottom: 1px solid rgba(189, 189, 189, 0.29);
+        padding: 13px 0;
+    }
+}
