@@ -1,11 +1,15 @@
 /* ------------------------------------------main-block-stykes------------------------------------------ */
 .main{
+	height: 100%;
 	padding: 140px 0px 265px;
 	border-radius: 0px 0px 160px 160px;
 	background-repeat: no-repeat;
-	background-position: top left;
+	background-position: top center;
 	background-size: cover;
 	color: rgba(255, 255, 255, 1);
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 .alphabet{
 	display: flex;
